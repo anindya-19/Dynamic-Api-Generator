@@ -4,6 +4,7 @@ import {
   Plus, Trash2, Edit3, Send, Terminal, AlertCircle, CheckCircle2, 
   Layers, ArrowRight, Server, Download, ShieldCheck, Zap
 } from 'lucide-react';
+import { GoogleGenAI } from '@google/genai';
 
 // Preset prompts for quick testing
 const PRESETS = [
@@ -142,9 +143,9 @@ Return ONLY a valid JSON object matching this structure:
   ]
 }`;
 
-      const apiKey = "";
-      const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-3-flash-preview:generateContent?key=${apiKey}`;
-
+      // api setup for gemini
+      const apiKey = import.meta.env.VITE_GEMINI_API_KEY || "";
+      const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=${apiKey}`;
       const response = await fetch(apiUrl, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },

@@ -16,12 +16,6 @@ Built to accelerate product prototyping, this tool eliminates the manual overhea
 
 ---
 
-## 📸 Demo
-
-![Dynamic API Generator Demo](https://via.placeholder.com/1200x675.png?text=Dynamic+API+Generator+Interactive+Demo+GIF)
-
----
-
 ## 🛠️ Tech Stack
 
 - **Frontend:** React 18, Vite
